@@ -21,7 +21,7 @@ def cross_entropy_loss(y_true, y_pred):
     return -np.sum(y_true * np.log(y_pred + epsilon)) / m
 
 # ==========================================
-# 2. Neural Network Class (Version 2.0)
+# 2. Neural Network Class
 # ==========================================
 class ThreeLayerNN:
     def __init__(self, input_size, hidden1_size, hidden2_size, output_size, learning_rate=0.05):
@@ -136,7 +136,7 @@ if __name__ == "__main__":
     X_val = X_train_full[50000:]
     Y_val = Y_train_full[50000:]
 
-    # Initialize V2.0 Network (H1=256, LR=0.05)
+    # Initialize Network (H1=256, LR=0.05)
     print("\nStarting Version 2.0 training...")
     nn = ThreeLayerNN(
         input_size=784, 
