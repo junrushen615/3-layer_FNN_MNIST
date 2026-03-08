@@ -22,7 +22,7 @@ def cross_entropy_loss(y_true, y_pred):
     return -np.sum(y_true * np.log(y_pred + epsilon)) / m
 
 # ==========================================
-# 2. Neural Network Class (Mini-Batch)
+# 2. Neural Network Class
 # ==========================================
 class ThreeLayerNN:
     def __init__(self, input_size, hidden1_size, hidden2_size, output_size, learning_rate=0.1):
@@ -141,7 +141,6 @@ if __name__ == "__main__":
         learning_rate=0.1
     )
     
-    # Train for 20 epochs using batches of 128 images
     nn.train(X_train, Y_train, epochs=20, batch_size=128)
 
     # Evaluate on the official 10,000 image test set
