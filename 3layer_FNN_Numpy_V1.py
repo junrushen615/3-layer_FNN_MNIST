@@ -137,8 +137,6 @@ if __name__ == "__main__":
         learning_rate=0.1
     )
     
-    # Because we are using batches, we need far fewer epochs!
-    # 20 epochs is usually plenty to hit 95%+ accuracy on MNIST.
     nn.train(X_train, Y_train, epochs=20, batch_size=128)
 
     # Evaluate on test set
